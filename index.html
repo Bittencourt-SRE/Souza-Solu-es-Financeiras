@@ -1,121 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucielena Souza | Souza Soluções Financeiras</title>
+  <title>Souza Soluções Financeiras - Equipe Avante</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-    body { background: #0a0a0a; color: #eee; }
-    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background: #f5f5f5;
+      color: #333;
+    }
     header {
-      background: #000; color: #D4AF37; padding: 40px 20px; text-align: center; border-bottom: 2px solid #D4AF37;
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      min-height: 600px;
+      background: url('logo.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    header img { width: 140px; margin-bottom: 15px; }
-    header h1 { font-size: 26px; margin-bottom: 8px; letter-spacing: 1px; }
-    header p { font-size: 15px; color: #ccc; }
-
-    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-    .container h2 { text-align:center; margin-bottom:30px; color:#D4AF37; font-size: 24px; }
-
-    .catalogo {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.25);
     }
-    .card {
-      background: #111; border: 1px solid #D4AF37; border-radius: 12px; padding: 25px; 
-      box-shadow: 0 4px 12px rgba(212,175,55,0.1); transition: transform 0.2s;
+    .banner-text {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 20px;
     }
-    .card:hover { transform: translateY(-5px); border-color: #fff; }
-    .card h3 { color: #D4AF37; margin-bottom: 10px; font-size: 18px; }
-    .card p { font-size: 14px; line-height: 1.6; color: #ccc; }
-
-    .contato {
-      background: #D4AF37; color: #000; text-align: center; padding: 50px 20px; margin-top: 50px; border-radius: 12px;
+    .banner-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
-    .contato h2 { margin-bottom: 15px; }
-    .btn-whats {
-      display: inline-block; background: #25D366; color: white; padding: 15px 30px; 
-      border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px;
-      transition: 0.2s;
+    .banner-text p {
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
     }
-    .btn-whats:hover { background: #1ebe57; }
-
-    footer { text-align: center; padding: 20px; font-size: 12px; color: #777; }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: #D4AF37;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background: #b8941f;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Souza Soluções Financeiras">
-    <h1>LUCIELENA SOUZA</h1>
-    <p>SOUZA SOLUÇÕES FINANCEIRAS - EQUIPE AVANTE</p>
+    <div class="overlay"></div>
+    <div class="banner-text">
+      <h1>Souza Soluções Financeiras</h1>
+      <p>Equipe Avante - Seu crédito aprovado com segurança</p>
+      <a href="https://wa.me/55SEUNUMERO" class="cta-btn">Fale no WhatsApp</a>
+    </div>
   </header>
 
-  <div class="container">
-    <h2>Nossas Soluções Financeiras</h2>
-    
-    <div class="catalogo">
-      
-      <div class="card">
-        <h3>Empréstimo para Aposentados</h3>
-        <p>Consignado INSS com as menores taxas do mercado e liberação rápida direto no benefício.</p>
-      </div>
-
-      <div class="card">
-        <h3>Empréstimo para Pensionistas</h3>
-        <p>Condições especiais para pensionistas do INSS. Sem burocracia e com atendimento humanizado.</p>
-      </div>
-
-      <div class="card">
-        <h3>Servidores Públicos</h3>
-        <p>Crédito consignado com taxas exclusivas para municipais, estaduais e federais. Com troco na renegociação.</p>
-      </div>
-
-      <div class="card">
-        <h3>Antecipação FGTS</h3>
-        <p>Antecipe até 10 anos do seu FGTS. Dinheiro na conta em até 24h sem afetar sua renda mensal.</p>
-      </div>
-
-      <div class="card">
-        <h3>Empréstimo CLT</h3>
-        <p>Crédito com desconto em folha para trabalhadores CLT. Análise facilitada e aprovação rápida.</p>
-      </div>
-
-      <div class="card">
-        <h3>Bolsa Família</h3>
-        <p>Linha de crédito exclusiva para beneficiários do Bolsa Família. Valores que cabem no seu bolso.</p>
-      </div>
-
-      <div class="card">
-        <h3>BPC / LOAS</h3>
-        <p>Atendimento especial para beneficiários BPC/LOAS. Orientação completa e segura.</p>
-      </div>
-
-      <div class="card">
-        <h3>Empréstimo Conta de Energia</h3>
-        <p>Crédito usando sua conta de luz como garantia. Juros baixos e liberação imediata.</p>
-      </div>
-
-      <div class="card">
-        <h3>Garantia Veicular</h3>
-        <p>Use seu veículo como garantia e pegue um valor alto com parcelas que cabem no orçamento.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="contato">
-      <h2>Faça uma Simulação Gratuita</h2>
-      <p style="margin-bottom:20px;">Fale com a Lucielena no WhatsApp e descubra qual crédito é melhor pra você.</p>
-      <a class="btn-whats" href="https://wa.me/55SEUNUMEROAQUI" target="_blank">
-        Falar no WhatsApp
-      </a>
-    </div>
-  </div>
+  <section>
+    <h2>Por que escolher a gente?</h2>
+    <p>Atendimento humanizado, aprovação rápida e as melhores taxas do mercado. Estamos aqui pra te ajudar a realizar seus planos.</p>
+  </section>
 
   <footer>
-    © 2026 Lucielena Souza - Souza Soluções Financeiras. Todos os direitos reservados.
+    <p>© 2026 Souza Soluções Financeiras - Todos os direitos reservados</p>
   </footer>
 
 </body>
