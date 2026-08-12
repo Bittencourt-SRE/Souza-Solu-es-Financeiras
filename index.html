@@ -5,98 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Souza Soluções Financeiras - Equipe Avante</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-    body {
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      position: relative;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f5f5f5; }
+
+    .topo img {
       width: 100%;
-      height: 85vh;
-      min-height: 600px;
-      background: url('logo.png') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: auto;
+      display: block;
     }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.25);
-    }
-    .banner-text {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
-    .banner-text h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    }
-    .banner-text p {
-      font-size: 1.3rem;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-    }
-    .cta-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background: #D4AF37;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      transition: 0.3s;
-    }
-    .cta-btn:hover {
-      background: #b8941f;
-      transform: scale(1.05);
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
+
+    .servicos {
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
       text-align: center;
     }
+    .servicos h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #222;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+
     footer {
       background: #111;
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="overlay"></div>
-    <div class="banner-text">
-      <h1>Souza Soluções Financeiras</h1>
-      <p>Equipe Avante - Seu crédito aprovado com segurança</p>
-      <a href="https://wa.me/55SEUNUMERO" class="cta-btn">Fale no WhatsApp</a>
-    </div>
-  </header>
+  <!-- TOPO: SÓ A FOTO -->
+  <div class="topo">
+    <img src="logo.png" alt="Souza Soluções Financeiras">
+  </div>
 
-  <section>
-    <h2>Por que escolher a gente?</h2>
-    <p>Atendimento humanizado, aprovação rápida e as melhores taxas do mercado. Estamos aqui pra te ajudar a realizar seus planos.</p>
+  <!-- SERVIÇOS -->
+  <section class="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Empréstimo Consignado</h3>
+        <p>Para aposentados, pensionistas e servidores. Taxas baixas e aprovação rápida.</p>
+      </div>
+      <div class="card">
+        <h3>Crédito Pessoal</h3>
+        <p>Dinheiro na conta em até 24h com as melhores condições do mercado.</p>
+      </div>
+      <div class="card">
+        <h3>FGTS e Antecipação</h3>
+        <p>Antecipe seu FGTS sem comprometer o orçamento. Saque rápido e seguro.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 Souza Soluções Financeiras - Todos os direitos reservados</p>
+    <p>© 2026 Souza Soluções Financeiras - Equipe Avante</p>
   </footer>
 
 </body>
