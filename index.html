@@ -14,27 +14,40 @@
       display: block;
     }
 
-    .servicos {
-      padding: 50px 20px;
+    .secao {
+      padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+    }
+    .secao h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #222;
       text-align: center;
     }
-    .servicos h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #222;
+    .secao p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 15px;
     }
-    .cards {
+    .destaque {
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    .servicos .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      margin-top: 30px;
     }
     .card {
       background: white;
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
     .card h3 {
       color: #D4AF37;
@@ -57,8 +70,17 @@
     <img src="logo.png" alt="Souza Soluções Financeiras">
   </div>
 
+  <!-- SOBRE NÓS -->
+  <section class="secao">
+    <h2>Sobre Nós</h2>
+    <p>A <span class="destaque">Souza Soluções Financeiras</span> nasceu com um propósito claro: facilitar o acesso ao crédito com segurança, transparência e compromisso.</p>
+    <p>Somos uma empresa séria, referência no mercado financeiro, formada por uma equipe de <span class="destaque">mais de 20 corretores</span> especializados e treinados para encontrar a melhor solução para cada cliente.</p>
+    <p>Sob a liderança de <span class="destaque">Lucielena Souza</span>, referência em vendas desde a fundação da empresa, já impactamos a vida de <span class="destaque">mais de 50 mil pessoas</span>. Seja para quitar uma dívida, realizar um sonho ou conquistar a casa própria, estamos aqui para fazer acontecer.</p>
+    <p><b>Na Souza, você não é só mais um número. Você é prioridade.</b></p>
+  </section>
+
   <!-- SERVIÇOS -->
-  <section class="servicos">
+  <section class="secao servicos">
     <h2>Nossos Serviços</h2>
     <div class="cards">
       <div class="card">
