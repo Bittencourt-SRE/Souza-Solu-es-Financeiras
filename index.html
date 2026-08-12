@@ -62,6 +62,83 @@
       font-size: 1rem;
       line-height: 1.6;
     }
+    .btn-whatsapp {
+      display: block;
+      background: #25D366;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5b;
+    }
+
+    /* POPUP */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .popup-content {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+    }
+    .popup-content h3 {
+      margin-bottom: 15px;
+      color: #222;
+      text-align: center;
+    }
+    .popup-content label {
+      font-size: 0.9rem;
+      color: #444;
+      display: block;
+      margin-top: 10px;
+    }
+    .popup-content input, .popup-content select, .popup-content textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .popup-content button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .popup-content button:hover {
+      background: #1ebe5b;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #888;
+    }
 
     footer {
       background: #111;
@@ -86,62 +163,103 @@
     <p>Somos uma empresa séria, referência no mercado financeiro, formada por uma equipe de <span class="destaque">mais de 20 corretores</span> especializados e treinados para encontrar a melhor solução para cada cliente.</p>
     <p>Sob a liderança de <span class="destaque">Lucielena Souza</span>, referência em vendas desde a fundação da empresa, já impactamos a vida de <span class="destaque">mais de 50 mil pessoas</span>. Seja para quitar uma dívida, realizar um sonho ou conquistar a casa própria, estamos aqui para fazer acontecer.</p>
     <p><b>Na Souza, você não é só mais um número. Você é prioridade.</b></p>
+    <a class="btn-whatsapp" onclick="openPopup()">Fale com um Corretor no WhatsApp</a>
   </section>
 
   <!-- SERVIÇOS -->
   <section class="secao servicos">
     <h2>Modalidades de Empréstimo</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Aposentados</h3>
-        <p>Crédito consignado com taxas especiais e parcelas que cabem no seu bolso.</p>
-      </div>
-      <div class="card">
-        <h3>Pensionistas</h3>
-        <p>Empréstimo rápido e seguro, com aprovação facilitada.</p>
-      </div>
-      <div class="card">
-        <h3>Servidores Públicos</h3>
-        <p>Atendemos servidores de todas as esferas: Federais, Estaduais e Municipais. Temos convênio com a Prefeitura de todos os estados e diversos órgãos públicos.</p>
-      </div>
-      <div class="card">
-        <h3>FGTS</h3>
-        <p>Antecipe até 10 parcelas do seu FGTS de forma rápida e sem burocracia.</p>
-      </div>
-      <div class="card">
-        <h3>CLT</h3>
-        <p>Crédito com desconto direto na folha para trabalhadores de carteira assinada.</p>
-      </div>
-      <div class="card">
-        <h3>Bolsa Família</h3>
-        <p>Linha de crédito exclusiva para beneficiários do programa, com condições acessíveis.</p>
-      </div>
-      <div class="card">
-        <h3>BPC / LOAS</h3>
-        <p>Empréstimo para beneficiários do BPC e LOAS com segurança e respeito.</p>
-      </div>
-      <div class="card">
-        <h3>Conta de Energia</h3>
-        <p>Empréstimo com pagamento na conta de luz. Aprovação imediata e sem consulta ao SPC.</p>
-      </div>
-      <div class="card">
-        <h3>Garantia Veicular</h3>
-        <p>Use seu carro como garantia e tenha crédito com as menores taxas do mercado.</p>
-      </div>
-      <div class="card">
-        <h3>Militares do Estado</h3>
-        <p>Condições exclusivas para Policiais Militares e Bombeiros de todo o Brasil.</p>
-      </div>
-      <div class="card">
-        <h3>Militares das Forças Armadas</h3>
-        <p>Crédito especial para Exército, Marinha e Aeronáutica. Taxas reduzidas e prazo estendido.</p>
-      </div>
+      <div class="card"><h3>Aposentados</h3><p>Crédito consignado com taxas especiais e parcelas que cabem no seu bolso.</p></div>
+      <div class="card"><h3>Pensionistas</h3><p>Empréstimo rápido e seguro, com aprovação facilitada.</p></div>
+      <div class="card"><h3>Servidores Públicos</h3><p>Atendemos servidores de todas as esferas: Federais, Estaduais e Municipais. Temos convênio com a Prefeitura de todos os estados e diversos órgãos públicos.</p></div>
+      <div class="card"><h3>FGTS</h3><p>Antecipe até 10 parcelas do seu FGTS de forma rápida e sem burocracia.</p></div>
+      <div class="card"><h3>CLT</h3><p>Crédito com desconto direto na folha para trabalhadores de carteira assinada.</p></div>
+      <div class="card"><h3>Bolsa Família</h3><p>Linha de crédito exclusiva para beneficiários do programa, com condições acessíveis.</p></div>
+      <div class="card"><h3>BPC / LOAS</h3><p>Empréstimo para beneficiários do BPC e LOAS com segurança e respeito.</p></div>
+      <div class="card"><h3>Conta de Energia</h3><p>Empréstimo com pagamento na conta de luz. Aprovação imediata e sem consulta ao SPC.</p></div>
+      <div class="card"><h3>Garantia Veicular</h3><p>Use seu carro como garantia e tenha crédito com as menores taxas do mercado.</p></div>
+      <div class="card"><h3>Militares do Estado</h3><p>Condições exclusivas para Policiais Militares e Bombeiros de todo o Brasil.</p></div>
+      <div class="card"><h3>Militares das Forças Armadas</h3><p>Crédito especial para Exército, Marinha e Aeronáutica. Taxas reduzidas e prazo estendido.</p></div>
     </div>
   </section>
 
   <footer>
     <p>© 2026 Souza Soluções Financeiras - Equipe Avante</p>
   </footer>
+
+  <!-- POPUP FORM -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3>Solicitar Atendimento</h3>
+      <form id="formWhats">
+        <label>Nome Completo</label>
+        <input type="text" id="nome" required>
+
+        <label>CPF</label>
+        <input type="text" id="cpf" placeholder="000.000.000-00" required>
+
+        <label>Data de Nascimento</label>
+        <input type="date" id="nascimento" required>
+
+        <label>Modalidade do Empréstimo</label>
+        <select id="modalidade" onchange="toggleOutros()" required>
+          <option value="">Selecione</option>
+          <option>Aposentados</option>
+          <option>Pensionistas</option>
+          <option>Servidores Públicos</option>
+          <option>FGTS</option>
+          <option>CLT</option>
+          <option>Bolsa Família</option>
+          <option>BPC / LOAS</option>
+          <option>Conta de Energia</option>
+          <option>Garantia Veicular</option>
+          <option>Militares do Estado</option>
+          <option>Militares das Forças Armadas</option>
+          <option>Outros</option>
+        </select>
+
+        <div id="outrosDiv" style="display:none;">
+          <label>Descreva</label>
+          <textarea id="outros" rows="2" placeholder="Qual empréstimo deseja?"></textarea>
+        </div>
+
+        <button type="submit">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+    function toggleOutros() {
+      const val = document.getElementById('modalidade').value;
+      document.getElementById('outrosDiv').style.display = val === 'Outros' ? 'block' : 'none';
+    }
+
+    document.getElementById('formWhats').addEventListener('submit', function(e){
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const cpf = document.getElementById('cpf').value;
+      const nascimento = document.getElementById('nascimento').value;
+      let modalidade = document.getElementById('modalidade').value;
+      if(modalidade === 'Outros') {
+        modalidade = 'Outros: ' + document.getElementById('outros').value;
+      }
+
+      const mensagem = `Olá! Gostaria de solicitar um empréstimo.%0A%0A*Nome:* ${nome}%0A*CPF:* ${cpf}%0A*Data de Nascimento:* ${nascimento}%0A*Modalidade:* ${modalidade}`;
+      
+      // TROCAR AQUI PELO NUMERO DA LUCIELENA COM DDD E 55
+      const numero = '55DDDNUMERO'; 
+      window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
+      closePopup();
+    });
+  </script>
 
 </body>
 </html>
