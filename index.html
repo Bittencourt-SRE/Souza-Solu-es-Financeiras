@@ -38,7 +38,7 @@
 
     .servicos .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
@@ -47,11 +47,20 @@
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
+      text-align: left;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card h3 {
       color: #D4AF37;
       margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     footer {
@@ -81,19 +90,51 @@
 
   <!-- SERVIÇOS -->
   <section class="secao servicos">
-    <h2>Nossos Serviços</h2>
+    <h2>Modalidades de Empréstimo</h2>
     <div class="cards">
       <div class="card">
-        <h3>Empréstimo Consignado</h3>
-        <p>Para aposentados, pensionistas e servidores. Taxas baixas e aprovação rápida.</p>
+        <h3>Aposentados</h3>
+        <p>Crédito consignado com taxas especiais e parcelas que cabem no seu bolso.</p>
       </div>
       <div class="card">
-        <h3>Crédito Pessoal</h3>
-        <p>Dinheiro na conta em até 24h com as melhores condições do mercado.</p>
+        <h3>Pensionistas</h3>
+        <p>Empréstimo rápido e seguro, com aprovação facilitada.</p>
       </div>
       <div class="card">
-        <h3>FGTS e Antecipação</h3>
-        <p>Antecipe seu FGTS sem comprometer o orçamento. Saque rápido e seguro.</p>
+        <h3>Servidores Públicos</h3>
+        <p>Atendemos servidores de todas as esferas: Federais, Estaduais e Municipais. Temos convênio com a Prefeitura de todos os estados e diversos órgãos públicos.</p>
+      </div>
+      <div class="card">
+        <h3>FGTS</h3>
+        <p>Antecipe até 10 parcelas do seu FGTS de forma rápida e sem burocracia.</p>
+      </div>
+      <div class="card">
+        <h3>CLT</h3>
+        <p>Crédito com desconto direto na folha para trabalhadores de carteira assinada.</p>
+      </div>
+      <div class="card">
+        <h3>Bolsa Família</h3>
+        <p>Linha de crédito exclusiva para beneficiários do programa, com condições acessíveis.</p>
+      </div>
+      <div class="card">
+        <h3>BPC / LOAS</h3>
+        <p>Empréstimo para beneficiários do BPC e LOAS com segurança e respeito.</p>
+      </div>
+      <div class="card">
+        <h3>Conta de Energia</h3>
+        <p>Empréstimo com pagamento na conta de luz. Aprovação imediata e sem consulta ao SPC.</p>
+      </div>
+      <div class="card">
+        <h3>Garantia Veicular</h3>
+        <p>Use seu carro como garantia e tenha crédito com as menores taxas do mercado.</p>
+      </div>
+      <div class="card">
+        <h3>Militares do Estado</h3>
+        <p>Condições exclusivas para Policiais Militares e Bombeiros de todo o Brasil.</p>
+      </div>
+      <div class="card">
+        <h3>Militares das Forças Armadas</h3>
+        <p>Crédito especial para Exército, Marinha e Aeronáutica. Taxas reduzidas e prazo estendido.</p>
       </div>
     </div>
   </section>
