@@ -6,7 +6,7 @@
   <title>Souza Soluções Financeiras - Equipe Avante</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #000000; } /* FUNDO PRETO */
+    body { background: #000; }
 
     .topo img {
       width: 100%;
@@ -32,7 +32,7 @@
       margin-bottom: 15px;
     }
     .destaque {
-      color: #CFAE5B; /* DOURADO DO LETREIRO */
+      color: #CFAE5B;
       font-weight: bold;
     }
 
@@ -54,7 +54,7 @@
       transform: translateY(-5px);
     }
     .card h3 {
-      color: #CFAE5B; /* DOURADO DO LETREIRO */
+      color: #CFAE5B;
       margin-bottom: 10px;
       font-size: 1.2rem;
     }
@@ -65,7 +65,7 @@
     }
     .btn-whatsapp {
       display: block;
-      background: #CFAE5B; /* DOURADO DO LETREIRO */
+      background: #CFAE5B;
       color: #000;
       text-align: center;
       padding: 12px;
@@ -124,7 +124,7 @@
       width: 100%;
       padding: 12px;
       margin-top: 15px;
-      background: #CFAE5B; /* DOURADO DO LETREIRO */
+      background: #CFAE5B;
       color: #000;
       border: none;
       border-radius: 8px;
@@ -162,11 +162,13 @@
   <!-- SOBRE NÓS -->
   <section class="secao">
     <h2>Sobre Nós</h2>
-    <p>A <span class="destaque">Souza Soluções Financeiras</span> nasceu com um propósito claro: facilitar o acesso ao crédito com segurança, transparência e compromisso.</p>
-    <p>Somos uma empresa séria, referência no mercado financeiro, formada por uma equipe de <span class="destaque">mais de 20 corretores</span> especializados e treinados para encontrar a melhor solução para cada cliente.</p>
-    <p>Sob a liderança de <span class="destaque">Lucielena Souza</span>, referência em vendas desde a fundação da empresa, já impactamos a vida de <span class="destaque">mais de 50 mil pessoas</span>. Seja para quitar uma dívida, realizar um sonho ou conquistar a casa própria, estamos aqui para fazer acontecer.</p>
-    <p><b>Aqui você não é só mais um número. Você é prioridade.</b></p> <!-- TROQUEI NA SOUZA POR AQUI -->
-    <a class="btn-whatsapp" onclick="openPopup()">Fale comigo</a> <!-- BOTAO ALTERADO -->
+    <div style="text-align: justify;"> <!-- TEXTO JUSTIFICADO -->
+      <p>A <span class="destaque">Souza Soluções Financeiras</span> nasceu com um propósito claro: facilitar o acesso ao crédito com segurança, transparência e compromisso.</p>
+      <p>Somos uma empresa séria, referência no mercado financeiro, formada por uma equipe de <span class="destaque">mais de 20 corretores</span> especializados e treinados para encontrar a melhor solução para cada cliente.</p>
+      <p>Sob a liderança de <span class="destaque">Lucielena Souza</span>, referência em vendas desde a fundação da empresa, já impactamos a vida de <span class="destaque">mais de 50 mil pessoas</span>. Seja para quitar uma dívida, realizar um sonho ou conquistar a casa própria, estamos aqui para fazer acontecer.</p>
+      <p><b>Aqui você não é só mais um número. Você é prioridade.</b></p>
+    </div>
+    <a class="btn-whatsapp" onclick="openPopup()">Fale comigo</a>
   </section>
 
   <!-- SERVIÇOS -->
@@ -255,7 +257,6 @@
         modalidade = 'Outros: ' + document.getElementById('outros').value;
       }
 
-      // MENSAGEM NOVA
       const mensagem = `Ola Lucielena, Vim pelo site!
 Seguem meus dados:
 Nome: ${nome}
