@@ -6,7 +6,7 @@
   <title>Souza Soluções Financeiras - Equipe Avante</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #f5f5f5; }
+    body { background: #FDE3C4; } /* COR NOVA DO FUNDO */
 
     .topo img {
       width: 100%;
@@ -252,11 +252,15 @@
         modalidade = 'Outros: ' + document.getElementById('outros').value;
       }
 
-      const mensagem = `Olá! Gostaria de solicitar um empréstimo.%0A%0A*Nome:* ${nome}%0A*CPF:* ${cpf}%0A*Data de Nascimento:* ${nascimento}%0A*Modalidade:* ${modalidade}`;
+      // Mensagem simples sem firula
+      const mensagem = `Ola. Gostaria de solicitar um emprestimo.
+Nome: ${nome}
+CPF: ${cpf}
+Data de Nascimento: ${nascimento}
+Modalidade: ${modalidade}`;
       
-      // TROCAR AQUI PELO NUMERO DA LUCIELENA COM DDD E 55
-      const numero = '55DDDNUMERO'; 
-      window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
+      const numero = '5551995702188'; 
+      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, '_blank');
       closePopup();
     });
   </script>
