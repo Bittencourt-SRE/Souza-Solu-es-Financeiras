@@ -211,6 +211,9 @@
       text-decoration: none;
       font-weight: bold;
     }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -273,7 +276,7 @@
   </section>
 
   <footer>
-    <p>Desenvolvido por <a href="#" target="_blank">Edmilson Bittencourt</a></p>
+    <p>Desenvolvido por <a href="https://wa.me/5551985108885?text=Olá,%20Vim%20pelo%20site%20da%20Lucielena,%20Gostei%20do%20projeto%20e%20desejo%20fazer%20um%20orçamento!" target="_blank">Edmilson Bittencourt</a></p>
   </footer>
 
   <!-- BOTÃO WHATSAPP FIXO -->
@@ -324,6 +327,8 @@
   </div>
 
   <script>
+    const NUMERO_WHATSAPP = '5521964622679'; // Número da Lucielena
+
     function openPopup() {
       document.getElementById('popup').style.display = 'flex';
     }
@@ -352,8 +357,7 @@ CPF: ${cpf}
 Data de Nascimento: ${nascimento}
 Modalidade: ${modalidade}`;
       
-      const numero = '5521964622679'; 
-      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, '_blank');
+      window.open(`https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`, '_blank');
       closePopup();
     });
   </script>
